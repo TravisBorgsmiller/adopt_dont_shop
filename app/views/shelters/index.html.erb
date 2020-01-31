@@ -1,0 +1,7 @@
+<h1>Shelter Index Page</h1>
+
+<% @shelters.each do |shelter| %>
+  <br><%= shelter.name %></br>
+<% end %>
+<br></br>
+<%= link_to 'Create new shelter', '/shelters/new' %>
