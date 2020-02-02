@@ -28,4 +28,12 @@ RSpec.describe 'shelter index page' do
     click_link "Update #{@trav_shelter.name}"
     expect(current_path).to eq("/shelters/#{@trav_shelter.id}/edit")
   end
+
+  it 'has link to delete shelter' do
+    visit '/shelters'
+
+    click_link "Delete #{@nelly_shelter.name}"
+    expect(current_path).to eq('/shelters')
+    expect(page).to_not have_content(@nelly_shelter.name)
+  end 
 end
