@@ -21,4 +21,11 @@ RSpec.describe 'shelter index page' do
     expect(page).to have_content(@trav_shelter.name)
     expect(page).to have_content(@nelly_shelter.name)
   end
+
+  it 'has link to update shelter' do
+    visit '/shelters'
+
+    click_link "Update #{@trav_shelter.name}"
+    expect(current_path).to eq("/shelters/#{@trav_shelter.id}/edit")
+  end
 end
