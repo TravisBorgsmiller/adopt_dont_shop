@@ -13,3 +13,22 @@
  *= require_tree .
  *= require_self
  */
+
+ .topnav a:hover {
+   background-color: #17BEBB;
+   color: black;
+ }
+
+ .topnav {
+   overflow: hidden;
+   background-color: #FFFFFF;
+ }
+
+ .topnav a {
+    float: left;
+    color: #000000;
+    text-align: center;
+    padding: 20px;
+    text-decoration: none;
+    font-size: 17px;
+  }
