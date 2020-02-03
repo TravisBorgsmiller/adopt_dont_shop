@@ -19,7 +19,7 @@ RSpec.describe 'As a visitor when I visit pet show page' do
     visit "/pets/#{buster.id}"
     expect(current_path).to eq("/pets/#{buster.id}")
 
-    expect(page).to have_content(buster.image)
+    expect(page).to have_css("img[src*='https://images2.minutemediacdn.com/image/upload/c_crop,h_2788,w_4960,x_0,y_255/f_auto,q_auto,w_1100/v1554918537/shape/mentalfloss/istock-488657289.jpg']")
     expect(page).to have_content(buster.name)
     expect(page).to have_content(buster.description)
     expect(page).to have_content(buster.approximate_age)

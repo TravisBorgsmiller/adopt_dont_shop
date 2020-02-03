@@ -7,3 +7,5 @@
   <br><%= pet.sex %></br>
   <br><%= link_to "Create New Pet For #{pet.shelter.name}", "/shelters/#{pet.shelter_id}/pets/new" %></br>
 <% end %>
+
+<h2>Number of pets in shelter: <%= @pets.count %></h2>

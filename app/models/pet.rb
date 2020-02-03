@@ -7,4 +7,8 @@ class Pet < ApplicationRecord
                        :adoptable,
                        :image
   belongs_to :shelter
+
+  def count
+    Shelter.sum("Shelter.pets")
+  end
 end
